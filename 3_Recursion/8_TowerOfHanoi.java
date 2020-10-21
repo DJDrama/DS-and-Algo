@@ -10,9 +10,6 @@ public class TowerOfHanoi {
     }
 }
 
-/**
- * Given a string, point all subsets of it in any order
- */
 class Main {
     public static void main(String[] args) {
         TowerOfHanoi t = new TowerOfHanoi();
