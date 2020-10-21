@@ -14,7 +14,9 @@ public class OddOccurrence {
         for (int k : arr)
             xor ^= k;
 
-        int sn = xor & -xor;
+        System.out.println("xor : " + xor);
+        int sn = xor & ~(xor-1); // finding right most set bit
+
         for (int j : arr) {
             if ((j & sn) != 0)
                 res1 ^= j;
@@ -46,6 +48,15 @@ class Main {
 
         // 3: 2, 4: 4, 5: 1, 6: 1, 7: 2
         // answer should be 5 and 6 which appear only 1 time
+        // 1) xor of all numbers
+        // 3^4^3...^7^7 = 5^6 = 3
+        // 5=101, 6=110 --> 5^6 = 011(3)
+        // 2) divide array into two groups into last set vs last not set
+        // group1 = {3, 3, 5, 7, 7} //last bit is set
+        // group2 = {4, 4, 4, 4, 6} //last bit is not set
+        // 3) xor of group1 = 5
+        // 4) xor of group2 = 6
+        // result = 5, 6
         arr = new int[]{3, 4, 3, 4, 5, 4, 4, 6, 7, 7};
         oddOccurrence.findTwoOddOccurringNumbers(arr); // 5 6
 
