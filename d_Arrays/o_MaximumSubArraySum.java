@@ -2,6 +2,7 @@ public class MaximumSubArraySum {
     //Maximum Sum SubArray
     //{2, 3, -8 ,7,-1, 2, 3} --> 11(7, -1, 2, 3)
     //{5, 8, 3} --> 16
+    // O(n) time complexity, O(1) space complexity
     int getMaximumSubArraySum(int[] arr){
         int res=arr[0];
         int maxEnding = arr[0];
