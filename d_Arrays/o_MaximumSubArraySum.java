@@ -3,7 +3,7 @@ public class MaximumSubArraySum {
     //{2, 3, -8 ,7,-1, 2, 3} --> 11(7, -1, 2, 3)
     //{5, 8, 3} --> 16
     int getMaximumSubArraySum(int[] arr){
-        int res=0;
+        int res=arr[0];
         int maxEnding = arr[0];
         for(int i=1; i<arr.length; i++){
             maxEnding = Math.max(maxEnding+arr[i], arr[i]);
