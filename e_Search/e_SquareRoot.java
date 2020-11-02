@@ -1,10 +1,10 @@
 public class SquareRoot {
     int getSquareRoot(int n) {
-        int res = -1;
-        int l = 0; // root(0) == 0
+        int res = 0;
+        int l = 1; // root(0) == 0
         int r = n;
         while (l <= r) {
-            int mid = l + (r - l) / 2;
+            int mid = l + r / 2;
             int mult = mid * mid;
             if (mult == n)
                 return mid;
@@ -22,7 +22,7 @@ public class SquareRoot {
 class Main {
     public static void main(String[] args) {
         SquareRoot c = new SquareRoot();
-        int x = 4; // --> 2
+        int x = 2147395599; // --> 2
         System.out.println(c.getSquareRoot(x));
 
         x = 14; // --> 3
