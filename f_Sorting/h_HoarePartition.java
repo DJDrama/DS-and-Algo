@@ -1,4 +1,4 @@
-public class HoarsePartition {
+public class HoarePartition {
     // Hoare's Partition (Much Better than Lomuto Partition)
     // Pivot = First Element
     int hoarsePartition(int[] arr, int l, int r) {
@@ -24,7 +24,7 @@ public class HoarsePartition {
 
 class Main {
     public static void main(String[] args) {
-        HoarsePartition l = new HoarsePartition();
+        HoarePartition l = new HoarePartition();
         int[] arr = new int[]{5, 3, 8, 4, 2, 7, 1, 10};
         int n = arr.length;
 
