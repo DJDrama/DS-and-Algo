@@ -3,6 +3,7 @@ import java.util.HashSet;
 public class IntersectionOfTwoArrays {
     // {10, 15, 20, 15, 30, 30, 5}, {30, 5, 30, 80} --> 2 (30, 5)
     // {10, 20}, {20, 30} --> 1 (20)
+    // O(m+n) time complexity, O(n) space complexity
     int getIntersectionCount(int[] a, int[] b) {
         HashSet<Integer> set = new HashSet();
         for(int num: a)
