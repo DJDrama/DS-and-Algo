@@ -1,14 +1,25 @@
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class ReverseQueue {
     // reversing a queue
     // {10, 5, 15, 20} --> {20, 15, 5, 10}
-    void reverse(Queue<Integer> q) {
+    void reverseRecursive(Queue<Integer> q) {
         if (q.isEmpty()) return;
         int f = q.poll(); // head element
-        reverse(q);
+        reverseRecursive(q);
         q.offer(f);
+    }
+
+    void reverseIterative(Queue<Integer> q) {
+        Stack<Integer> stack = new Stack();
+        while (!q.isEmpty()) {
+            stack.push(q.poll());
+        }
+        while (!stack.isEmpty()) {
+            q.offer(stack.pop());
+        }
     }
 
     void printQueue(Queue<Integer> q) {
@@ -30,9 +41,14 @@ class Main {
             queue.offer(num);
         q.printQueue(queue);
 
-        // Reverse
-        q.reverse(queue);
+        // Reverse Recursively
+        System.out.println("-- Reverse --");
+        q.reverseRecursive(queue);
+        q.printQueue(queue);
 
+        // Reverse Iteratively
+        System.out.println("-- Reverse --");
+        q.reverseIterative(queue);
         q.printQueue(queue);
     }
 }
