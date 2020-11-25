@@ -31,6 +31,8 @@ public class LevelOrderTraversal {
     }
 
     // Level order Traversal
+    // Theta(n) time complexity
+    // O(n) space complexity
     private static void levelOrderTraversal(TreeNode root) {
         if (root == null) return;
         Queue<TreeNode> q = new LinkedList<>();
