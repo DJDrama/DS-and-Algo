@@ -14,7 +14,6 @@ public class DetectCycleInDirectedGraph {
 
     void addEdge(int s, int e) {
         list.get(s).add(e);
-        list.get(e).add(s);
     }
 
     private boolean dfsRecursion(int source, boolean[] visited, boolean[] recSt) {
