@@ -1,7 +1,7 @@
-public class UnionByRank {
+public class FindAndUnionOnDisjointSets {
     private int[] parent;
 
-    UnionByRank(int[] p) {
+    FindAndUnionOnDisjointSets(int[] p) {
         this.parent = p;
     }
 
@@ -32,7 +32,7 @@ class Main {
         int n = 5;
         int[] parent = new int[n];
 
-        UnionByRank u = new UnionByRank(parent);
+        FindAndUnionOnDisjointSets u = new FindAndUnionOnDisjointSets(parent);
 
         // parent = {0, 1, 2, 3, 4}
         u.initialize();
